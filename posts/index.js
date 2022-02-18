@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const { randomBytes } = require('crypto');
 const { required } = require('nodemon/lib/config');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 const posts = {};
 
